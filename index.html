@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS ::selection Pseudo-element</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#0d0d1a;color:#e0e0f0;font-family:'Segoe UI',sans-serif;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px 20px;gap:32px}
+  h1{font-size:clamp(1.5rem,4vw,2.5rem);background:linear-gradient(135deg,#a78bfa,#f472b6);-webkit-background-clip:text;-webkit-text-fill-color:transparent;text-align:center}
+  .demo{background:#1a1a2e;border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:32px;max-width:600px;width:100%;display:flex;flex-direction:column;gap:20px}
+  .demo p{line-height:1.8;font-size:1.05rem;color:#c9c9e0}
+  .style-1::selection{background:#a78bfa;color:#fff}
+  .style-2::selection{background:#f472b6;color:#fff}
+  .style-3::selection{background:#34d399;color:#0d0d1a}
+  .style-4::selection{background:#fbbf24;color:#0d0d1a}
+  label{font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:#6b6b90;margin-bottom:4px;display:block}
+</style>
+</head>
+<body>
+<h1>CSS ::selection Pseudo-element</h1>
+<div class="demo">
+  <div><label>Purple Selection</label><p class="style-1">Select this text to see a purple highlight. The ::selection pseudo-element applies styles to the portion of a document that has been highlighted by the user.</p></div>
+  <div><label>Pink Selection</label><p class="style-2">Select this text to see a pink highlight. You can customize background-color and color properties using the ::selection pseudo-element.</p></div>
+  <div><label>Green Selection</label><p class="style-3">Select this text to see a green highlight. This is useful for matching your website's color scheme with text selection behavior.</p></div>
+  <div><label>Yellow Selection</label><p class="style-4">Select this text to see a yellow highlight. Browser support for ::selection is excellent across all modern browsers.</p></div>
+</div>
+<p style="color:#6b6b90;font-size:.85rem">Select any text above to see the effect</p>
+</body>
+</html>
